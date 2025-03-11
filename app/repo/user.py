@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import Depends, FastAPI, HTTPException
 from starlette import status
 
-from .blog import models, schemas,hashing
+from app import models, schemas,hashing
 
 def create(request: schemas.User, db:Session):
     new_user = models.User(name=request.name, email=request.email, password= hashing.Hash.bcrypt(request.password))

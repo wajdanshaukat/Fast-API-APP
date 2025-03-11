@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends,status, Response, HTTPException
-from blog import schemas, models, database
-from blog.repo import user
+from app import schemas, models, database
+from app.repo import user
 from sqlalchemy.orm import Session
 
 
