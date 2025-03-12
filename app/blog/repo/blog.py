@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import Depends, FastAPI, HTTPException, status
 from starlette.responses import Response
 
-from app import models, schemas, hashing
+from blog import models, schemas, hashing
 
 
 def get_all(db:Session):
