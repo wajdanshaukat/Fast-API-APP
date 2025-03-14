@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends,status, Response, HTTPException
-from blog import schemas, models, database, oauth2
+from .. import schemas, models, database, oauth2
 from typing import List
 from sqlalchemy.orm import Session
-from blog.repo import blog
+from ..repo import blog
 
 router = APIRouter(
     prefix = "/blogs",
